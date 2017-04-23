@@ -27,23 +27,38 @@ class ViewController: UIViewController {
         label.backgroundColor = UIColor.orange
         label.textColor = UIColor.white
         label.layer.masksToBounds = true
+        label.text = nil
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func inputNumber(_ sender: UIButton) {
+        // ボタンの値格納
+        let num = Int(sender.currentTitle!)
+        if type.isEmpty {
+            // 演算子が空の場合
+            before = before * 10 + num!
+            label.text = String(describing: before)
+        } else {
+            // 演算子が指定されている場合
+            now = now * 10 + num!
+            label.text = String(before)+type+String(now)
+        }
+    }
 
     @IBAction func clear(_ sender: Any) {
         before = 0
         now = 0
         result = 0
+        label.text = nil
     }
     
     @IBAction func plus(_ sender: Any) {
         type = "+"
-        
-        
     }
     
     @IBAction func minus(_ sender: Any) {
@@ -86,97 +101,5 @@ class ViewController: UIViewController {
             label.text = String(now)
         }
     }
-    
-    @IBAction func one(_ sender: Any) {
-        if type.isEmpty {
-            before = before*10+1
-            label.text = String(before)
-        } else {
-            now = now*10+1
-            label.text = String(before)+type+String(now)
-        }
-    }
-    
-    @IBAction func second(_ sender: Any) {
-        if type.isEmpty {
-            before = before*10+2
-            label.text = String(before)
-        } else {
-            now = now*10+2
-            label.text = String(before)+type+String(now)
-        }
-    }
-    
-    @IBAction func three(_ sender: Any) {
-        if type.isEmpty {
-            before = before*10+3
-            label.text = String(before)
-        } else {
-            now = now*10+3
-            label.text = String(before)+type+String(now)
-        }
-    }
-    
-    @IBAction func four(_ sender: Any) {
-        if type.isEmpty {
-            before = before*10+4
-            label.text = String(before)
-        } else {
-            now = now*10+4
-            label.text = String(before)+type+String(now)
-        }
-    }
-    
-    @IBAction func five(_ sender: Any) {
-        if type.isEmpty {
-            before = before*10+5
-            label.text = String(before)
-        } else {
-            now = now*10+5
-            label.text = String(before)+type+String(now)
-        }
-    }
-    
-    @IBAction func six(_ sender: Any) {
-        if type.isEmpty {
-            before = before*10+6
-            label.text = String(before)
-        } else {
-            now = now*10+6
-            label.text = String(before)+type+String(now)
-        }
-    }
-    
-    @IBAction func seven(_ sender: Any) {
-        if type.isEmpty {
-            before = before*10+7
-            label.text = String(before)
-        } else {
-            now = now*10+7
-            label.text = String(before)+type+String(now)
-        }
-    }
-    
-    @IBAction func eight(_ sender: Any) {
-        if type.isEmpty {
-            before = before*10+8
-            label.text = String(before)
-        } else {
-            now = now*10+8
-            label.text = String(before)+type+String(now)
-        }
-
-    }
-    
-    @IBAction func nine(_ sender: Any) {
-        if type.isEmpty {
-            before = before*10+9
-            label.text = String(before)
-        } else {
-            now = now*10+9
-            label.text = String(before)+type+String(now)
-        }
-    }
-    
 }
 

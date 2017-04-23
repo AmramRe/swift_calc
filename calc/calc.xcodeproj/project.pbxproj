@@ -507,6 +507,7 @@
 				49A369511EA32A9800B40BF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49A369521EA32A9800B40BF1 /* Build configuration list for PBXNativeTarget "calcTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +516,7 @@
 				49A369541EA32A9800B40BF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49A369551EA32A9800B40BF1 /* Build configuration list for PBXNativeTarget "calcUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +525,7 @@
 				49A369571EA32A9800B40BF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
